@@ -1,0 +1,64 @@
+import React from 'react';
+import styles from './Header.module.css';
+import { MenuIcon, SlidersIcon, SunIcon, MoonIcon, SparkleIcon } from './icons.jsx';
+
+export default function Header({ onOpenSidebar, onOpenControls, theme, onToggleTheme }) {
+  return (
+    <header className={styles.header}>
+      <button
+        type="button"
+        className={`${styles.iconBtn} ${styles.menuBtn}`}
+        onClick={onOpenSidebar}
+        aria-label="Abrir categorias"
+      >
+        <MenuIcon />
+      </button>
+
+      <div className={styles.brand}>
+        <span className={styles.logoBadge} aria-hidden="true">
+          <SparkleIcon size={18} />
+        </span>
+        <span>
+          <span className={styles.title}>AG Charts Gallery</span>
+          <span className={styles.subtitle}> · Community edition</span>
+        </span>
+      </div>
+
+      <div className={styles.actions}>
+        <a
+          href="https://www.ag-grid.com/charts/"
+          target="_blank"
+          rel="noreferrer"
+          className={styles.linkBtn}
+        >
+          Docs
+        </a>
+        <a
+          href="https://github.com/LucasCalazans/ag-charts"
+          target="_blank"
+          rel="noreferrer"
+          className={styles.linkBtn}
+        >
+          GitHub
+        </a>
+        <button
+          type="button"
+          className={styles.themeBtn}
+          onClick={onToggleTheme}
+          aria-label={theme === 'dark' ? 'Mudar para tema claro' : 'Mudar para tema escuro'}
+          title={theme === 'dark' ? 'Tema claro' : 'Tema escuro'}
+        >
+          {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+        </button>
+        <button
+          type="button"
+          className={`${styles.iconBtn} ${styles.controlsBtn}`}
+          onClick={onOpenControls}
+          aria-label="Abrir controles"
+        >
+          <SlidersIcon />
+        </button>
+      </div>
+    </header>
+  );
+}
