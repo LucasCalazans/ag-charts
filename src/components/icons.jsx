@@ -28,18 +28,6 @@ export const SlidersIcon = (p) => (
     <circle cx="18" cy="18" r="2"/>
   </Svg>
 );
-export const SunIcon = (p) => (
-  <Svg {...p}>
-    <circle cx="12" cy="12" r="4"/>
-    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
-  </Svg>
-);
-export const MoonIcon = (p) => (
-  <Svg {...p}><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></Svg>
-);
-export const CodeIcon = (p) => (
-  <Svg {...p}><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></Svg>
-);
 export const SparkleIcon = (p) => (
   <Svg {...p}>
     <path d="M12 3l1.7 4.4L18 9l-4.3 1.6L12 15l-1.7-4.4L6 9l4.3-1.6z"/>

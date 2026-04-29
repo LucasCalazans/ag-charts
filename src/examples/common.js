@@ -18,8 +18,8 @@ const PALETTE_STROKES = [
   '#3aac63', '#cf9a1d', '#4a82c9', '#856ec5',
 ];
 
-export const themeFor = (mode) => ({
-  baseTheme: mode === 'light' ? 'ag-default' : 'ag-default-dark',
+const lightTheme = {
+  baseTheme: 'ag-default',
   palette: { fills: PALETTE_FILLS, strokes: PALETTE_STROKES },
   overrides: {
     common: {
@@ -28,10 +28,10 @@ export const themeFor = (mode) => ({
       padding:  { top: 8, right: 8, bottom: 8, left: 8 },
     },
   },
-});
+};
 
-export const baseChrome = ({ theme, animation, legend, title, subtitle }) => ({
-  theme: themeFor(theme),
+export const baseChrome = ({ animation, legend, title, subtitle }) => ({
+  theme: lightTheme,
   background: { fill: 'transparent' },
   animation: { enabled: animation },
   legend: {

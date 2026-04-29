@@ -3,7 +3,7 @@
 /* ------------------------------------------------------------------ */
 
 :root {
-  /* Brand accents (shared by both themes) */
+  /* Brand accents */
   --accent:        #7c5cff;   /* violet  */
   --accent-2:      #2dd4bf;   /* teal    */
   --accent-3:      #fb923c;   /* coral   */
@@ -11,42 +11,7 @@
   --accent-5:      #4ade80;   /* lime    */
   --accent-6:      #fbbf24;   /* amber   */
 
-  /* Dark theme (default) */
-  --bg:            #14132b;
-  --bg-2:          #0e0d22;
-  --panel:         #1d1b3d;
-  --panel-2:       #272552;
-  --panel-3:       #34315f;
-  --border:        #2d2a55;
-  --border-strong: #3f3b73;
-  --text:          #f3f0ff;
-  --text-dim:      #a39ec9;
-  --text-muted:    #6e6997;
-
-  --shadow-sm:     0 1px 2px rgba(0, 0, 0, 0.35);
-  --shadow-md:     0 4px 12px rgba(0, 0, 0, 0.30), 0 1px 2px rgba(0, 0, 0, 0.40);
-  --shadow-lg:     0 18px 38px rgba(8, 6, 30, 0.45), 0 6px 14px rgba(8, 6, 30, 0.30);
-  --glow:          0 0 0 1px color-mix(in srgb, var(--accent) 40%, transparent),
-                   0 8px 28px color-mix(in srgb, var(--accent) 26%, transparent);
-
-  --radius-sm: 6px;
-  --radius:    10px;
-  --radius-lg: 14px;
-  --radius-xl: 22px;
-
-  --header-h:  56px;
-  --tabs-h:    46px;
-
-  --gradient-brand: linear-gradient(135deg, #7c5cff 0%, #2dd4bf 100%);
-  --gradient-warm:  linear-gradient(135deg, #fb923c 0%, #f472b6 100%);
-  --gradient-glow:  radial-gradient(120% 80% at 50% -20%,
-                      color-mix(in srgb, var(--accent) 24%, transparent) 0%,
-                      transparent 60%);
-
-  color-scheme: dark;
-}
-
-:root.light {
+  /* Surface + text (light) */
   --bg:            #fbf9ff;
   --bg-2:          #f3eeff;
   --panel:         #ffffff;
@@ -63,6 +28,20 @@
   --shadow-lg:     0 22px 38px rgba(60, 40, 120, 0.14), 0 4px 12px rgba(60, 40, 120, 0.08);
   --glow:          0 0 0 1px color-mix(in srgb, var(--accent) 30%, transparent),
                    0 10px 24px color-mix(in srgb, var(--accent) 20%, transparent);
+
+  --radius-sm: 6px;
+  --radius:    10px;
+  --radius-lg: 14px;
+  --radius-xl: 22px;
+
+  --header-h:  56px;
+  --tabs-h:    46px;
+
+  --gradient-brand: linear-gradient(135deg, #7c5cff 0%, #2dd4bf 100%);
+  --gradient-warm:  linear-gradient(135deg, #fb923c 0%, #f472b6 100%);
+  --gradient-glow:  radial-gradient(120% 80% at 50% -20%,
+                      color-mix(in srgb, var(--accent) 18%, transparent) 0%,
+                      transparent 60%);
 
   color-scheme: light;
 }

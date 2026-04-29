@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Header.module.css';
-import { MenuIcon, SlidersIcon, SunIcon, MoonIcon, SparkleIcon } from './icons.jsx';
+import { MenuIcon, SlidersIcon, SparkleIcon } from './icons.jsx';
 
-export default function Header({ onOpenSidebar, onOpenControls, theme, onToggleTheme }) {
+export default function Header({ onOpenSidebar, onOpenControls }) {
   return (
     <header className={styles.header}>
       <button
@@ -41,15 +41,6 @@ export default function Header({ onOpenSidebar, onOpenControls, theme, onToggleT
         >
           GitHub
         </a>
-        <button
-          type="button"
-          className={styles.themeBtn}
-          onClick={onToggleTheme}
-          aria-label={theme === 'dark' ? 'Mudar para tema claro' : 'Mudar para tema escuro'}
-          title={theme === 'dark' ? 'Tema claro' : 'Tema escuro'}
-        >
-          {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
-        </button>
         <button
           type="button"
           className={`${styles.iconBtn} ${styles.controlsBtn}`}

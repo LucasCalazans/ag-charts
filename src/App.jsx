@@ -22,17 +22,11 @@ const isDesktop = () =>
 export default function App() {
   const [{ categoryId, exampleId }, setRoute] = useState(parseHash);
   const [controls, setControls] = useState({
-    theme: 'dark',
     animation: true,
     legend: true,
   });
   const [sidebarOpen, setSidebarOpen]   = useState(false);
   const [controlsOpen, setControlsOpen] = useState(false);
-
-  // Sync theme to <html> for CSS variables
-  useEffect(() => {
-    document.documentElement.classList.toggle('light', controls.theme === 'light');
-  }, [controls.theme]);
 
   // Listen to hash changes
   useEffect(() => {
@@ -80,16 +74,11 @@ export default function App() {
 
   const selectExample = (id) => setRoute({ categoryId, exampleId: id });
 
-  const toggleTheme = () =>
-    setControls((c) => ({ ...c, theme: c.theme === 'dark' ? 'light' : 'dark' }));
-
   return (
     <div className={styles.app}>
       <Header
         onOpenSidebar={() => setSidebarOpen(true)}
         onOpenControls={() => setControlsOpen(true)}
-        theme={controls.theme}
-        onToggleTheme={toggleTheme}
       />
 
       <div className={styles.body}>

@@ -49,8 +49,6 @@
   box-shadow: 0 6px 18px color-mix(in srgb, var(--accent) 35%, transparent);
 }
 
-:root.light .tab.active { color: white; }
-
 .dot {
   width: 7px;
   height: 7px;

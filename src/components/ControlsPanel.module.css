@@ -132,32 +132,6 @@
   transform: translateX(18px);
 }
 
-.segmented {
-  display: inline-flex;
-  background: var(--panel-3);
-  border: 1px solid var(--border-strong);
-  border-radius: 10px;
-  padding: 3px;
-  gap: 3px;
-}
-.segItem {
-  background: transparent;
-  border: 0;
-  padding: 6px 10px;
-  border-radius: 7px;
-  font-size: 12.5px;
-  font-weight: 600;
-  color: var(--text-dim);
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-.segItem.active {
-  background: var(--panel);
-  color: var(--text);
-  box-shadow: var(--shadow-sm);
-}
-
 .tip {
   margin: 0;
   padding: 12px 14px;

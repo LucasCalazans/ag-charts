@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import styles from './ControlsPanel.module.css';
-import { CloseIcon, SunIcon, MoonIcon } from './icons.jsx';
+import { CloseIcon } from './icons.jsx';
 
 function Toggle({ checked, onChange, id }) {
   return (
@@ -49,33 +49,6 @@ export default function ControlsPanel({ controls, onChange, open, onClose }) {
         </div>
 
         <div className={styles.body}>
-          <div className={styles.section}>
-            <h4 className={styles.sectionTitle}>Tema</h4>
-            <div className={styles.row}>
-              <span className={styles.rowLabel}>Modo</span>
-              <div className={styles.segmented} role="tablist" aria-label="Tema">
-                <button
-                  type="button"
-                  role="tab"
-                  aria-selected={controls.theme === 'dark'}
-                  className={`${styles.segItem} ${controls.theme === 'dark' ? styles.active : ''}`}
-                  onClick={() => set({ theme: 'dark' })}
-                >
-                  <MoonIcon size={14} /> Escuro
-                </button>
-                <button
-                  type="button"
-                  role="tab"
-                  aria-selected={controls.theme === 'light'}
-                  className={`${styles.segItem} ${controls.theme === 'light' ? styles.active : ''}`}
-                  onClick={() => set({ theme: 'light' })}
-                >
-                  <SunIcon size={14} /> Claro
-                </button>
-              </div>
-            </div>
-          </div>
-
           <div className={styles.section}>
             <h4 className={styles.sectionTitle}>Renderização</h4>
             <div className={styles.row}>
