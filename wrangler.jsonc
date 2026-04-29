@@ -1,0 +1,14 @@
+// Cloudflare Workers config — static-assets only.
+// O `wrangler deploy` lê este arquivo e publica o conteúdo de ./dist
+// (gerado pelo `npm run build`) como Workers Static Assets.
+// Não há código de Worker (sem `main`), então só os arquivos estáticos
+// são servidos — comportamento equivalente ao Cloudflare Pages.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ag-charts",
+  "compatibility_date": "2026-04-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+}
