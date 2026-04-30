@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import styles from './Sidebar.module.css';
 import { CategoryIcon, CloseIcon } from './icons.jsx';
+import { AG_CHARTS_VERSION } from '../version.js';
 
 const COLORS = {
   cartesian:    'var(--accent)',
@@ -68,15 +69,15 @@ export default function Sidebar({ categories, activeCategory, onSelect, open, on
         </nav>
 
         <div className={styles.footer}>
-          AG Charts {''}
           <a
-            href="https://www.ag-grid.com/charts/"
+            href="https://www.ag-grid.com/charts/changelog/"
             target="_blank"
             rel="noreferrer"
-            style={{ color: 'var(--accent)' }}
+            className={styles.footerLink}
           >
-            Community
+            ag-charts-community
           </a>
+          <span className={styles.footerVersion}>v{AG_CHARTS_VERSION}</span>
         </div>
       </aside>
     </>

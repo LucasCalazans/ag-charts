@@ -148,9 +148,32 @@
 .footer {
   padding: 12px 14px;
   border-top: 1px solid var(--border);
-  font-size: 11px;
+  font-size: 11.5px;
   color: var(--text-muted);
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.footerLink {
+  color: var(--text-dim);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 120ms ease;
+}
+.footerLink:hover { color: var(--accent); }
+.footerVersion {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: var(--accent-2);
+  background: color-mix(in srgb, var(--accent-2) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent-2) 32%, transparent);
+  font-variant-numeric: tabular-nums;
 }
 
 /* Desktop: fixed column inside the layout, backdrop never shown */
